@@ -1,0 +1,135 @@
+.popup-menu {
+    position: fixed;
+    width: 436px;
+    height: 436px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    color: #263b68;
+    --color: white;
+}
+
+.popup-menu::before {
+    content: '';
+    position: absolute;
+    width: 124px;
+    height: 124px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 156px solid;
+    border-color: var(--color);
+    border-radius: 50%;
+}
+
+/*.popup-menu::before{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 124px;*/
+/*    height: 124px;*/
+/*    border-radius: 50%;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    !*z-index: 10;*!*/
+/*    transform: translate(-50%, -50%);*/
+/*    box-shadow: 0px 0px 0px 312px rgb(255, 255, 255);*/
+/*}*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+svg {
+    fill: #263b68;
+}
+
+.popup-menu ul li {
+    font-weight: 500;
+    position: absolute;
+    /*margin-top: 30px;*/
+    /*left: 14.5%;*/
+    /*top: 14%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*background-color: #8f8f8f;*/
+    /*transform: rotate(45deg);*/
+    transform-origin: 100% 100%;
+    /*transform: translate(-50%, -50%);*/
+    height: 218px;
+    width: 218px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-add {
+    transform: rotate(45deg);
+    /*color: #fefefe;*/
+    /*left: 50%;*/
+    /*top:12.5%;*/
+}
+
+.menu-add div {
+    padding-top: 30px;
+    transform: rotate(-45deg);
+}
+
+.menu-export {
+    transform: rotate(135deg);
+
+    /*top: 50%;*/
+    /*left: 87.5%;*/
+}
+
+.menu-export div {
+    transform: rotate(-135deg);
+    padding-right: 30px;
+}
+
+.menu-change {
+    transform: rotate(225deg);
+    /*top: 87.5%;*/
+    /*left: 50%;*/
+}
+
+.menu-change div {
+    transform: rotate(-225deg);
+    padding-bottom: 30px;
+}
+
+
+
+.menu-import {
+    transform: rotate(315deg);
+    /*top: 50%;*/
+    /*left: 12.5%;*/
+}
+
+.menu-import div {
+    transform: rotate(-315deg);
+    padding-left: 30px;
+}

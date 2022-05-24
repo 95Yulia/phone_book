@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="panel-search">
+            <input type="text" id="search" placeholder="Поиск">
+        </div>
+        <div class="panel-header">
+            <div class="icon">
+                <img src="./assets/icon/menu.svg" alt="menu-icon">
+            </div>
+            <div class="name">Имя</div>
+            <div class="phone">Телефон</div>
+            <div class="address">Адрес</div>
+            <div class="email">Электронная почта</div>
+            <div class="edit">
+            </div>
+        </div>
+    </div>
+    <div class="main"></div>
+</div>
+<div class="popup add" style="display:none;">
+    <div class="popup-content">
+        <form class="add-user" action="#">
+            <h3>Добавить пользователя</h3>
+            <div class="user-avatar">
+                <input id="avatar" type="file" name="user_avatar" accept="image/jpeg,image/png" hidden>
+                <label for="avatar">
+                    <img src="./assets/avatar/2550383.png" alt="avatar" class="user-avatar-icon">
+                </label>
+            </div>
+            <input class="form-input" name="user_name"  type="text" placeholder="Имя" required>
+            <input class="form-input" name="user_phone" type="tel" placeholder="Номер">
+            <input class="form-input" name="user_email" type="email" placeholder="Электронная почта">
+            <input class="form-input" name="user_address" type="text" placeholder="Адрес">
+            <div class="btns">
+                <button class="ok btn">Сохранить</button>
+                <button class="cancel btn" type="button">Отмена</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="popup menu" style="display:none;">
+    <div class="popup-menu">
+        <ul>
+            <li class="menu-import">
+                <div class="menu-item">
+<!--                    <img src="icon/database_import_icon.svg" alt="import icon" class="img-menu">-->
+                    <svg class="icon-import" width="41" height="37" viewBox="0 0 41 37" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.84 0.759995C18.02 0.759995 12.22 2.9 9.92 5.9L20.42 16.4C21.84 16.62 23.28 16.76 24.84 16.76C33.68 16.76 40.84 13.18 40.84 8.76C40.84 4.33999 33.68 0.759995 24.84 0.759995ZM8.68 8.92L5.84 11.76L10.84 16.76H0.839996V20.76H10.84L5.84 25.76L8.68 28.6L18.52 18.76L8.68 8.92ZM40.84 12.76C40.84 17.18 33.68 20.76 24.84 20.76C23.52 20.76 22.24 20.66 21.02 20.5L16.08 25.44C18.6 26.26 21.6 26.76 24.84 26.76C33.68 26.76 40.84 23.18 40.84 18.76V12.76ZM40.84 22.76C40.84 27.18 33.68 30.76 24.84 30.76C20.28 30.76 16.18 29.76 13.26 28.26L9.9 31.62C12.2 34.62 18.02 36.76 24.84 36.76C33.68 36.76 40.84 33.18 40.84 28.76"/>
+                    </svg>
+                    <p>Импортировать контакты</p>
+                </div>
+            </li>
+
+            <li class="menu-add">
+                <div class="menu-item">
+<!--                    <img src="icon/add-user.svg" alt="add-user icon" class="img-menu">-->
+                    <svg class="icon-add" width="45" height="36" viewBox="0 0 45 36" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27 18C31.9505 18 36 13.9499 36 9C36 4.05009 31.9505 0 27 0C22.0495 0 18 4.05009 18 9C18 13.9499 22.0495 18 27 18ZM27 22.5C21.0377 22.5 9 25.5377 9 31.5V36H45V31.5C45 25.5377 32.9623 22.5 27 22.5ZM9 15V9H6V15H0V18H6V24H9V18H15V15H9Z"/>
+                    </svg>
+                    <p>Добавить пользователя</p>
+                </div>
+            </li>
+
+            <li class="menu-export">
+                <div class="menu-item">
+<!--                    <img src="icon/database_export_icon.svg" alt="export icon" class="img-menu">-->
+                    <svg class="icon-export" width="40" height="36" viewBox="0 0 40 36" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 0C7.16 0 0 3.58 0 8C0 12.42 7.16 16 16 16C17 16 18 15.94 19 15.84V13H24.78L22.78 11L29.8 4C27 1.6 21.88 0 16 0ZM29.84 8.16L27 11L32 16H22V20H32L27 25L29.84 27.84L39.68 18L29.84 8.16ZM0 12V18C0 22.42 7.16 26 16 26C18.34 26 20.52 25.7 22.5 25.26L24.76 23H19V19.84C18 19.94 17 20 16 20C7.16 20 0 16.42 0 12ZM0 22V28C0 32.42 7.16 36 16 36C21.88 36 27 34.4 29.8 32L26 28.2C23.22 29.32 19.8 30 16 30C7.16 30 0 26.42 0 22Z"/>
+                    </svg>
+                    <p>Экспортировать контакты</p>
+                </div>
+            </li>
+
+            <li class="menu-change">
+                <div class="menu-item">
+<!--                   <img src="icon/Editing_Guide_-_Editing_basics.svg" alt="change icon" class="img-menu">-->
+                    <svg class="icon-change" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.5062 0.192471C28.1829 0.339404 27.7348 0.75082 26.192 2.27893L24.2818 4.18908L28.0507 7.95059L31.8123 11.7195L33.7225 9.80931C35.8531 7.67142 36 7.46571 36 6.65022C36 5.84943 35.9192 5.74658 33.0539 2.88871C31.1217 0.963874 30.365 0.265937 30.1225 0.155737C29.645 -0.0646648 29.0205 -0.0499716 28.5062 0.192471Z"/>
+                        <path d="M11.0355 17.4349L0 28.4696V32.2385V36H3.7691H7.53086L18.5884 24.9432L29.6459 13.8864L25.8988 10.1396C23.8416 8.0825 22.1371 6.39276 22.115 6.39276C22.093 6.39276 17.1116 11.3591 11.0355 17.4349Z"/>
+                    </svg>
+                    <p>Редактировать список</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
