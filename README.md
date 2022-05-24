@@ -1,1 +1,1 @@
-95yulia.github.io/phone_book/
+95yulia.github.io/phone_book/public/index.html
